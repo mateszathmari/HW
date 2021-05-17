@@ -50,6 +50,10 @@ function Task() {
     "  | _| _||_||_ |_   ||_||_|",
     "  ||_  _|  | _||_|  ||_| _|",
     "                           ",
+    "    _  _  _  _  _     _  _ ",
+    "|_||_|| || ||_   |  |  | _ ",
+    "  | _||_||_||_|  |  |  | _|",
+    "                           ",
   ];
 
   const splitToEntries = (file) => {
@@ -63,6 +67,21 @@ function Task() {
       }
     });
     return entities;
+  };
+
+  const validateNumber = (number) => {
+    let result = 0;
+    for (let i = 0; i < number.length; i++) {
+      if (number[i] === "?") {
+        return "ILL";
+      }
+      result += parseInt(number[i], 10) * (number.length - i);
+    }
+    if (result % 11 === 0) {
+      return "OK";
+    } else {
+      return "ERR";
+    }
   };
 
   // It reads the lines and splits to 9 segments
@@ -149,6 +168,12 @@ function Task() {
       let anotherVar = readDigit(transformedDigits);
       console.log(anotherVar);
     });
+    // this should return OK
+    console.log(validateNumber("457508000"));
+    // this should return ERR
+    console.log(validateNumber("664371495"));
+    // this should return ILL
+    console.log(validateNumber("86110??36"));
   };
 
   return (
