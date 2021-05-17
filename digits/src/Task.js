@@ -1,6 +1,7 @@
 import "./App.css";
 
 function Task() {
+  let counter = 0;
   /* As I can't use 3rd party library I skipped the file reading
     and I assumed the file was already readed by lines and every four lines are added to an array 
      */
@@ -142,7 +143,9 @@ function Task() {
       <div className="number">
         <button onClick={convert}>transform</button>
         {file.map((line) => (
-          <div className="line">{line}</div>
+          <div key={counter++} className="line">
+            {line}
+          </div>
         ))}
       </div>
       <header className="App-header"></header>
