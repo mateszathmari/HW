@@ -182,6 +182,27 @@ function Task() {
     console.log("|-----------|--------|");
   };
 
+  let digitGuesser = (wrongDigit) => {
+    let diffCounter = 0;
+    let possibleGuesses = [];
+    validDigits.forEach((validDigit) => {
+      diffCounter = 0;
+
+      for (let i = 0; i < validDigit.length; i++) {
+        if (wrongDigit[i] !== validDigit[i]) {
+          diffCounter++;
+          if (diffCounter > 1) {
+            break;
+          }
+        }
+      }
+
+      if (diffCounter === 1) {
+        possibleGuesses.push(validDigit);
+      }
+    });
+  };
+
   let convert = () => {
     let accounts = [];
     let entries = splitToEntries(file);
