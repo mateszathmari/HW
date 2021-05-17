@@ -86,39 +86,52 @@ function Task() {
     return digits;
   };
 
+  let validDigits = [
+    " _ | ||_|   ",
+    "     |  |   ",
+    " _  _||_    ",
+    " _  _| _|   ",
+    "   |_|  |   ",
+    " _ |_  _|   ",
+    " _ |_ |_|   ",
+    " _   |  |   ",
+    " _ |_||_|   ",
+    " _ |_| _|   ",
+  ];
+
   // It reads each segment and converts to number
   const readDigit = (digits) => {
     let num = "";
     digits.forEach((digit) => {
       switch (digit) {
-        case " _ | ||_|   ":
+        case validDigits[0]:
           num += "0";
           break;
-        case "     |  |   ":
+        case validDigits[1]:
           num += "1";
           break;
-        case " _  _||_    ":
+        case validDigits[2]:
           num += "2";
           break;
-        case " _  _| _|   ":
+        case validDigits[3]:
           num += "3";
           break;
-        case "   |_|  |   ":
+        case validDigits[4]:
           num += "4";
           break;
-        case " _ |_  _|   ":
+        case validDigits[5]:
           num += "5";
           break;
-        case " _ |_ |_|   ":
+        case validDigits[6]:
           num += "6";
           break;
-        case " _   |  |   ":
+        case validDigits[7]:
           num += "7";
           break;
-        case " _ |_||_|   ":
+        case validDigits[8]:
           num += "8";
           break;
-        case " _ |_| _|   ":
+        case validDigits[9]:
           num += "9";
           break;
         default:
