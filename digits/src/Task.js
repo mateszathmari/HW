@@ -10,10 +10,10 @@ function Task() {
     // "| || || || || || || || || |",
     // "|_||_||_||_||_||_||_||_||_|",
     // "                           ",
-    // "                           ",
-    // "  |  |  |  |  |  |  |  |  |",
-    // "  |  |  |  |  |  |  |  |  |",
-    // "                           ",
+    "                           ",
+    "  |  |  |  |  |  |  |  |  |",
+    "  |  |  |  |  |  |  |  |  |",
+    "                           ",
     // " _  _  _  _  _  _  _  _  _ ",
     // " _| _| _| _| _| _| _| _| _|",
     // "|_ |_ |_ |_ |_ |_ |_ |_ |_ ",
@@ -54,10 +54,10 @@ function Task() {
     // "|_||_|| || ||_   |  |  | _ ",
     // "  | _||_||_||_|  |  |  | _|",
     // "                           ",
-    "    _  _  _  _  _     _    ",
-    "|_||_   ||_ | ||_|| || || |",
-    "  | _|  | _||_||_||_||_||_|",
-    "                           ",
+    // "    _  _  _  _  _     _    ",
+    // "|_||_   ||_ | ||_|| || || |",
+    // "  | _|  | _||_||_||_||_||_|",
+    // "                           ",
     // " _  _     _  _        _  _ ",
     // "|_ |_ |_| _|  |  ||_||_||_ ",
     // "|_||_|  | _|  |  |  | _| _|",
@@ -174,7 +174,8 @@ function Task() {
     return num;
   };
 
-  let repair = (digits, accountString) => {
+  /*if I have multiple question marks and if I can guess one for each digits */
+  let repairMultiple = (digits, accountString) => {
     let goodAccountStrings = [];
 
     for (let i = 0; i < accountString.length; i++) {
@@ -193,6 +194,26 @@ function Task() {
           }
         });
       }
+    }
+    return goodAccountStrings;
+  };
+
+  let repair = (digits, accountString) => {
+    let goodAccountStrings = [];
+
+    for (let i = 0; i < accountString.length; i++) {
+      let possibleGuesses = digitGuesser(digits[i]);
+      let buffer = "";
+      // eslint-disable-next-line no-loop-func
+      possibleGuesses.forEach((possibleGuess) => {
+        buffer = digits[i];
+        digits[i] = possibleGuess;
+        accountString = readDigits(digits);
+        if (validateNumber(accountString) === "OK") {
+          goodAccountStrings.push(accountString);
+        }
+      });
+      digits[i] = buffer;
     }
     return goodAccountStrings;
   };
