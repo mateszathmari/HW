@@ -6,62 +6,62 @@ function Task() {
     and I assumed the file was already readed by lines and every four lines are added to an array 
      */
   let file = [
-    " _  _  _  _  _  _  _  _  _ ",
-    "| || || || || || || || || |",
-    "|_||_||_||_||_||_||_||_||_|",
-    "                           ",
-    "                           ",
-    "  |  |  |  |  |  |  |  |  |",
-    "  |  |  |  |  |  |  |  |  |",
-    "                           ",
-    " _  _  _  _  _  _  _  _  _ ",
-    " _| _| _| _| _| _| _| _| _|",
-    "|_ |_ |_ |_ |_ |_ |_ |_ |_ ",
-    "                           ",
-    " _  _  _  _  _  _  _  _  _ ",
-    " _| _| _| _| _| _| _| _| _|",
-    " _| _| _| _| _| _| _| _| _|",
-    "                           ",
-    "                           ",
-    "|_||_||_||_||_||_||_||_||_|",
-    "  |  |  |  |  |  |  |  |  |",
-    "                           ",
-    " _  _  _  _  _  _  _  _  _ ",
-    "|_ |_ |_ |_ |_ |_ |_ |_ |_ ",
-    " _| _| _| _| _| _| _| _| _|",
-    "                           ",
-    " _  _  _  _  _  _  _  _  _ ",
-    "|_ |_ |_ |_ |_ |_ |_ |_ |_ ",
-    "|_||_||_||_||_||_||_||_||_|",
-    "                           ",
-    " _  _  _  _  _  _  _  _  _ ",
-    "  |  |  |  |  |  |  |  |  |",
-    "  |  |  |  |  |  |  |  |  |",
-    "                           ",
-    " _  _  _  _  _  _  _  _  _ ",
-    "|_||_||_||_||_||_||_||_||_|",
-    "|_||_||_||_||_||_||_||_||_|",
-    "                           ",
-    " _  _  _  _  _  _  _  _  _ ",
-    "|_||_||_||_||_||_||_||_||_|",
-    " _| _| _| _| _| _| _| _| _|",
-    "                           ",
-    "    _  _     _  _  _  _  _ ",
-    "  | _| _||_||_ |_   ||_||_|",
-    "  ||_  _|  | _||_|  ||_| _|",
-    "                           ",
-    "    _  _  _  _  _     _  _ ",
-    "|_||_|| || ||_   |  |  | _ ",
-    "  | _||_||_||_|  |  |  | _|",
-    "                           ",
-    "    _  _  _  _  _  _  _  _ ",
+    // " _  _  _  _  _  _  _  _  _ ",
+    // "| || || || || || || || || |",
+    // "|_||_||_||_||_||_||_||_||_|",
+    // "                           ",
+    // "                           ",
+    // "  |  |  |  |  |  |  |  |  |",
+    // "  |  |  |  |  |  |  |  |  |",
+    // "                           ",
+    // " _  _  _  _  _  _  _  _  _ ",
+    // " _| _| _| _| _| _| _| _| _|",
+    // "|_ |_ |_ |_ |_ |_ |_ |_ |_ ",
+    // "                           ",
+    // " _  _  _  _  _  _  _  _  _ ",
+    // " _| _| _| _| _| _| _| _| _|",
+    // " _| _| _| _| _| _| _| _| _|",
+    // "                           ",
+    // "                           ",
+    // "|_||_||_||_||_||_||_||_||_|",
+    // "  |  |  |  |  |  |  |  |  |",
+    // "                           ",
+    // " _  _  _  _  _  _  _  _  _ ",
+    // "|_ |_ |_ |_ |_ |_ |_ |_ |_ ",
+    // " _| _| _| _| _| _| _| _| _|",
+    // "                           ",
+    // " _  _  _  _  _  _  _  _  _ ",
+    // "|_ |_ |_ |_ |_ |_ |_ |_ |_ ",
+    // "|_||_||_||_||_||_||_||_||_|",
+    // "                           ",
+    // " _  _  _  _  _  _  _  _  _ ",
+    // "  |  |  |  |  |  |  |  |  |",
+    // "  |  |  |  |  |  |  |  |  |",
+    // "                           ",
+    // " _  _  _  _  _  _  _  _  _ ",
+    // "|_||_||_||_||_||_||_||_||_|",
+    // "|_||_||_||_||_||_||_||_||_|",
+    // "                           ",
+    // " _  _  _  _  _  _  _  _  _ ",
+    // "|_||_||_||_||_||_||_||_||_|",
+    // " _| _| _| _| _| _| _| _| _|",
+    // "                           ",
+    // "    _  _     _  _  _  _  _ ",
+    // "  | _| _||_||_ |_   ||_||_|",
+    // "  ||_  _|  | _||_|  ||_| _|",
+    // "                           ",
+    // "    _  _  _  _  _     _  _ ",
+    // "|_||_|| || ||_   |  |  | _ ",
+    // "  | _||_||_||_|  |  |  | _|",
+    // "                           ",
+    "    _  _  _  _  _     _    ",
     "|_||_   ||_ | ||_|| || || |",
     "  | _|  | _||_||_||_||_||_|",
     "                           ",
-    " _  _     _  _        _  _ ",
-    "|_ |_ |_| _|  |  ||_||_||_ ",
-    "|_||_|  | _|  |  |  | _| _|",
-    "                           ",
+    // " _  _     _  _        _  _ ",
+    // "|_ |_ |_| _|  |  ||_||_||_ ",
+    // "|_||_|  | _|  |  |  | _| _|",
+    // "                           ",
   ];
 
   const splitToEntries = (file) => {
@@ -127,7 +127,7 @@ function Task() {
   ];
 
   // It reads each segment and converts to number
-  const readDigit = (digits) => {
+  const readDigits = (digits) => {
     let num = "";
     digits.forEach((digit) => {
       switch (digit) {
@@ -166,7 +166,45 @@ function Task() {
           break;
       }
     });
+
+    // if ((num.match(/\\??/g) || []).length > 0) {
+    //   let possibleOptions = repair(digits, num);
+    // }
+
     return num;
+  };
+
+  let repair = (digits, accountString) => {
+    let goodAccountStrings = [];
+
+    for (let i = 0; i < accountString.length; i++) {
+      if (accountString[i] === "?") {
+        let possibleGuesses = digitGuesser(digits[i]);
+        // eslint-disable-next-line no-loop-func
+        possibleGuesses.forEach((possibleGuess) => {
+          digits[i] = possibleGuess;
+          accountString = readDigits(digits);
+          if (countQuestionMarks(accountString) > 0) {
+            repair(digits, accountString).forEach((element) => {
+              goodAccountStrings.push(element);
+            });
+          } else if (validateNumber(accountString) === "OK") {
+            goodAccountStrings.push(accountString);
+          }
+        });
+      }
+    }
+    return goodAccountStrings;
+  };
+
+  let countQuestionMarks = (str) => {
+    let counter = 0;
+    for (let i = 0; i < str.length; i++) {
+      if (str[i] === "?") {
+        counter++;
+      }
+    }
+    return counter;
   };
 
   let logger = (accounts) => {
@@ -185,9 +223,13 @@ function Task() {
   let digitGuesser = (wrongDigit) => {
     let diffCounter = 0;
     let possibleGuesses = [];
+
+    /* I compare each valid digit with the wrong one if it only one difference,
+     I add to possibleGuesses array.*/
     validDigits.forEach((validDigit) => {
       diffCounter = 0;
 
+      /*compare each character, count diffs, if more than one diff, break */
       for (let i = 0; i < validDigit.length; i++) {
         if (wrongDigit[i] !== validDigit[i]) {
           diffCounter++;
@@ -201,6 +243,7 @@ function Task() {
         possibleGuesses.push(validDigit);
       }
     });
+    return possibleGuesses;
   };
 
   let convert = () => {
@@ -208,10 +251,12 @@ function Task() {
     let entries = splitToEntries(file);
     entries.forEach((entry) => {
       let transformedDigits = transformDigits(entry);
-      let anotherVar = readDigit(transformedDigits);
-      accounts.push(anotherVar);
+      let account = readDigits(transformedDigits);
+      let asd = repair(transformedDigits, account);
+      accounts.push(account);
     });
     logger(accounts);
+
     // // this should return OK
     // console.log(validateNumber("457508000"));
     // // this should return ERR
