@@ -54,6 +54,14 @@ function Task() {
     "|_||_|| || ||_   |  |  | _ ",
     "  | _||_||_||_|  |  |  | _|",
     "                           ",
+    "    _  _  _  _  _  _  _  _ ",
+    "|_||_   ||_ | ||_|| || || |",
+    "  | _|  | _||_||_||_||_||_|",
+    "                           ",
+    " _  _     _  _        _  _ ",
+    "|_ |_ |_| _|  |  ||_||_||_ ",
+    "|_||_|  | _|  |  |  | _| _|",
+    "                           ",
   ];
 
   const splitToEntries = (file) => {
@@ -161,19 +169,34 @@ function Task() {
     return num;
   };
 
+  let logger = (accounts) => {
+    let status = "";
+    console.log("| Account   | Status |");
+    console.log("|-----------|--------|");
+    accounts.forEach((account) => {
+      status = validateNumber(account);
+      console.log(
+        `| ${account} | ${status === "OK" ? status + " " : status}    |`
+      );
+    });
+    console.log("|-----------|--------|");
+  };
+
   let convert = () => {
+    let accounts = [];
     let entries = splitToEntries(file);
     entries.forEach((entry) => {
       let transformedDigits = transformDigits(entry);
       let anotherVar = readDigit(transformedDigits);
-      console.log(anotherVar);
+      accounts.push(anotherVar);
     });
-    // this should return OK
-    console.log(validateNumber("457508000"));
-    // this should return ERR
-    console.log(validateNumber("664371495"));
-    // this should return ILL
-    console.log(validateNumber("86110??36"));
+    logger(accounts);
+    // // this should return OK
+    // console.log(validateNumber("457508000"));
+    // // this should return ERR
+    // console.log(validateNumber("664371495"));
+    // // this should return ILL
+    // console.log(validateNumber("86110??36"));
   };
 
   return (
